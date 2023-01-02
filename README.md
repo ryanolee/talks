@@ -1,2 +1,2 @@
-# talks
-Resources used in talks I have done 
+# Talks
+Resources used in creating any of the talks I have done.

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "brum-php-diag"
+version = "0.1.0"
+description = "Diagrams for poetry"
+authors = ["Ryan Lee <rol@bluetel.co.uk>"]
+license = "BSD"
+readme = "README.md"
+packages = [{include = "brum_php_diag"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+diagrams = "^0.23.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
