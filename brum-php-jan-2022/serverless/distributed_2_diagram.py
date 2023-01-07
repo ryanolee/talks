@@ -8,12 +8,12 @@ from diagrams.aws.database import Elasticache, RDS
 import os
 
 base_dir = os.path.dirname(__file__)
-with Diagram("Distributed Example with AWS Services", show=True):
+with Diagram("Distributed Example with AWS Services", filename=f"{base_dir}/distributed_2_diagram", show=False):
     with Cluster("AWS Region"):
         with Cluster("EC2 instance\n(t3.xlarge, quad core, 16GB of ram)"):
-            nginx = Custom("Nginx", f'{base_dir}/img/nginx.png')
-            phpfpm = Custom("PhpFpm", f'{base_dir}/img/phpfpm.png')
-            phpcron = Custom("Php Cron Jobs", f'{base_dir}/img/phpcli.png')
+            nginx = Custom("Nginx", f'img/nginx.png')
+            phpfpm = Custom("PhpFpm", f'img/phpfpm.png')
+            phpcron = Custom("Php Cron Jobs", f'img/phpcli.png')
 
         mysql = RDS("RDS\n(MySql Database)")
         elasticache = Elasticache("Elastic Cache Cluster\n(Redis)")
@@ -27,4 +27,4 @@ with Diagram("Distributed Example with AWS Services", show=True):
         nginx >> Edge(style="dashed") << phpfpm
         phpfpm >> Edge() << [mysql, elasticache, elastic]
     
-    Custom("Client", f'{base_dir}/img/client.png') >> Edge(label="HTTP/HTTPs") << cloudfront
+    Custom("Client", f'img/client.png') >> Edge(label="HTTP/HTTPs") << cloudfront
