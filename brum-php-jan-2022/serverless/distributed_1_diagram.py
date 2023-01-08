@@ -3,7 +3,7 @@ from diagrams.custom import Custom
 import os
 
 base_dir = os.path.dirname(__file__)
-with Diagram("Client Server Internals with Lots of stuff + who knows what!?", filename=f"{base_dir}/distributed_1_diagram", show=False):
+with Diagram("Client Server Internals Distributed", filename=f"{base_dir}/distributed_1_diagram", show=False):
     with Cluster("Our Data Center / AWS / Azure / ect.."):
         with Cluster("App Server\n(quad core, 16GB of ram)"):
             nginx = Custom("Nginx", f'img/nginx.png')
