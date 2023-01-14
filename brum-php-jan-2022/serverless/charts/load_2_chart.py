@@ -26,4 +26,4 @@ ax.set_ylabel('Percentage')
 ax.set_title('Server CPU Usage')
 ax.legend()
 
-plt.savefig(f'{base_dir}/chart_1.png')
+plt.savefig(f'{base_dir}/load_2_chart.png')

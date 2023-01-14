@@ -11,6 +11,9 @@ packages = [{include = "brum_php_diag"}]
 python = "^3.9"
 diagrams = "^0.23.1"
 matplotlib = "^3.6.2"
+pandas = "^1.5.2"
+plotly = "^5.11.0"
+kaleido = "0.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
