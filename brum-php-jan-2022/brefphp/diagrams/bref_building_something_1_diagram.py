@@ -15,9 +15,7 @@ with Diagram("Relationships", filename=f"{base_dir}/bref_building_something_1_di
             aws_frontend_lambda = Lambda("AWS Frontend\nLambda")
      
         aws_api_gw = APIGateway("API Gateway")
-        aws_dynamodb = DynamodbTable("DynamoDb Table")
     
-    client >> Edge(label="HTTP Requests") << aws_api_gw
-    aws_frontend_lambda >> Edge(label="Query") << aws_dynamodb
+    client >> Edge(label="HTTPs Requests") << aws_api_gw
     aws_api_gw >> Edge(label="Fast CGI") << aws_frontend_lambda
 
